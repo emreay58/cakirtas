@@ -1,0 +1,75 @@
+{% extends 'base.html' %}  
+{% load static %}
+{% block title %}iletisim Sayfa{% endblock title %}
+{% block content %}
+
+     <!--========== PAGE CONTENT ==========-->
+        <!-- Feedback Form -->
+        <div class="g-position--relative g-bg-color--primary">
+            <div class="g-container--md g-padding-y-125--xs">
+                <div class="g-text-center--xs g-margin-t-50--xs g-margin-b-80--xs">
+                    <p class="text-uppercase g-font-size-14--xs g-font-weight--700 g-color--white-opacity g-letter-spacing--2 g-margin-b-25--xs">İletişim</p>
+                    <h2 class="g-font-size-32--xs g-font-size-36--sm g-color--white">Bizimle İletişime Geçebilirsiniz</h2>
+                </div>
+                <div class="row g-row-col--5 g-margin-b-80--xs">
+                    <div class="col-xs-4 g-full-width--xs g-margin-b-50--xs g-margin-b-0--sm">
+                        <div class="g-text-center--xs">
+                            <i class="g-display-block--xs g-font-size-40--xs g-color--white-opacity g-margin-b-30--xs ti-email"></i>
+                            <h4 class="g-font-size-18--xs g-color--white g-margin-b-5--xs">Email</h4>
+                            <p class="g-color--white-opacity">info@cakirtasgroup.com</p>
+                        </div>
+                    </div>
+                    <div class="col-xs-4 g-full-width--xs g-margin-b-50--xs g-margin-b-0--sm">
+                        <div class="g-text-center--xs">
+                            <i class="g-display-block--xs g-font-size-40--xs g-color--white-opacity g-margin-b-30--xs ti-map-alt"></i>
+                            <h4 class="g-font-size-18--xs g-color--white g-margin-b-5--xs">Adres</h4>
+                            <p class="g-color--white-opacity">Mustafa Kemal Mahallesi. Dumlupınar Bulvarı. No:274/8 D1 Blok No:86, 06530 Çankaya/Ankara</p>
+                        </div>
+                    </div>
+                    <div class="col-xs-4 g-full-width--xs">
+                        <div class="g-text-center--xs">
+                            <i class="g-display-block--xs g-font-size-40--xs g-color--white-opacity g-margin-b-30--xs ti-headphone-alt"></i>
+                            <h4 class="g-font-size-18--xs g-color--white g-margin-b-5--xs">Telefon</h4>
+                            <p class="g-color--white-opacity">+90 545 248 49 70
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <form class="center-block g-width-500--sm g-width-550--md" method="POST">
+                    {% if kayit %}
+                    <div class="alert alert-success">{{kayit}}</div>
+                    {% endif %}
+                    {% csrf_token %}
+                    <div class="g-margin-b-30--xs">
+                        <input type="text" class="form-control s-form-v3__input" name="name" placeholder="* Adınız Soyadınız">
+                    </div>
+                    <div class="g-margin-b-30--xs">
+                        <input type="text" class="form-control s-form-v3__input" name="subject" placeholder="* Konu">
+                    </div>
+                    <div class="row g-row-col-5 g-margin-b-50--xs">
+                        <div class="col-sm-6 g-margin-b-30--xs g-margin-b-0--md">
+                            <input type="email" class="form-control s-form-v3__input" name="email" placeholder="* Emaliniz">
+                        </div>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control s-form-v3__input" name="telefon" placeholder="* Telefonunuz">
+                        </div>
+                    </div>
+                    <div class="g-margin-b-80--xs">
+                        <textarea class="form-control s-form-v3__input" rows="5" name="message" placeholder="* Mesajınız"></textarea>
+                    </div>
+                    <div class="g-text-center--xs">
+                        <button type="submit" class="text-uppercase s-btn s-btn--md s-btn--white-bg g-radius--50 g-padding-x-70--xs g-margin-b-20--xs">Gönder</button>
+                    </div>
+                </form>
+            </div>
+            <img class="s-mockup-v2" src="{% static 'img/mockups/pencil-01.png' %}" alt="Mockup Image">
+        </div>
+        <!-- End Feedback Form -->
+        <!--========== END PAGE CONTENT ==========-->
+        <!-- Google Map -->
+        <div class="map-section">
+            <iframe style="border:0; width: 100%; height: 350px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3060.474453412522!2d32.75131901538057!3d39.90839737942739!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d3478d926ee701%3A0x7d52b0b51b2a8c13!2zSGFjxLFvxJ9sdSBQaWRlLUxhaG1hY3VuLUTDtm5lci3Dh29yYmEgS2FodmFsdMSx!5e0!3m2!1str!2str!4v1674556826811!5m2!1str!2str" frameborder="0" allowfullscreen></iframe>
+          </div>
+        <!-- End Google Map -->
+        <!--========== END PAGE CONTENT ==========-->
+{% endblock content %}
