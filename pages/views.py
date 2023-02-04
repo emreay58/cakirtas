@@ -61,8 +61,14 @@ def ContactView(request):
 
 def ProjeView(request):
     proje = Proje.objects.all()
+    category = Category.objects.all()
 
-    return render(request, 'pages/proje.html', {'proje':proje})
+    context = {
+         'proje' : proje,
+         'category' : category
+    }
+
+    return render(request, 'pages/proje.html', context)
 
 
 def ProjeDetail(request,slug):
@@ -87,7 +93,6 @@ def marka_by_category(request, slug):
     }
     return render(request, 'pages/proje.html', context)
 
-def VizyonView(request):
-    return render(request, 'pages/vizyon.html')
+
 
 

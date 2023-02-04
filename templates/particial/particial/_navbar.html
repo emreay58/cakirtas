@@ -44,27 +44,29 @@
                                 class="s-header__nav-menu-link s-header__nav-menu-link-divider"
                                 {% endif %}
                                 href="{% url 'index' %}">Ana Sayfa</a></li>
+                                <li class="s-header__nav-menu-item"><a 
+                                    {% if 'hakkimizda' in request.path %}
+                                    class="s-header__nav-menu-link s-header__nav-menu-link-divider -is-active"
+                                    {% else %}
+                                    class="s-header__nav-menu-link s-header__nav-menu-link-divider"
+                                    {% endif %}
+                                    href="{% url 'about' %}">Biz Kimiz?</a></li>
                             <li class="s-header__nav-menu-item"><a 
                                 {% if 'projeler' in request.path %}
                                 class="s-header__nav-menu-link s-header__nav-menu-link-divider -is-active"
                                 {% else %}
                                 class="s-header__nav-menu-link s-header__nav-menu-link-divider"
                                 {% endif %}
-                                href="{% url 'proje' %}">İşletmeler</a></li>
-                            <li class="s-header__nav-menu-item"><a 
-                                {% if 'hakkimizda' in request.path %}
-                                class="s-header__nav-menu-link s-header__nav-menu-link-divider -is-active"
-                                {% else %}
-                                class="s-header__nav-menu-link s-header__nav-menu-link-divider"
-                                {% endif %}
-                                href="{% url 'about' %}">Biz Kimiz?</a></li>
+                                href="{% url 'proje' %}">Tüm İşletmeler</a></li>
+                                {% for category in category  %}
                                 <li class="s-header__nav-menu-item"><a 
-                                    {% if 'vizyon' in request.path %}
+                                    {% if 'kategori' in request.path %}
                                     class="s-header__nav-menu-link s-header__nav-menu-link-divider -is-active"
                                     {% else %}
                                     class="s-header__nav-menu-link s-header__nav-menu-link-divider"
                                     {% endif %}
-                                    href="{% url 'vizyon' %}">Vizyon ve Misyon</a></li>
+                                    href="{% url 'category' category.slug %}">{{category.name|title}}</a></li>
+                                {% endfor %}
                             <li class="s-header__nav-menu-item"><a 
                                 {% if 'iletisim' in request.path %}
                                 class="s-header__nav-menu-link s-header__nav-menu-link-divider -is-active"
