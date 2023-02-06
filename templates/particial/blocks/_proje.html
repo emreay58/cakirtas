@@ -1,13 +1,13 @@
  {% load static %}
  <!-- News -->
- <div class="container g-padding-y-80--xs g-padding-y-125--sm">
-    <div class="g-text-center--xs g-margin-b-80--xs">
-        <p class="text-uppercase g-font-size-14--xs g-font-weight--700 g-color--primary g-letter-spacing--2 g-margin-b-25--xs">Çakırtaş Şirketler Gurubuna</p>
-        <h2 class="g-font-size-32--xs g-font-size-36--md">Aktif İşletmelerimiz</h2>
+ <div class="container g-padding-y-20--xs g-padding-y-50--sm">
+    <div class="g-text-center--xs g-margin-b-50--xs">
+        <p class="text-uppercase g-font-size-14--xs g-font-weight--700 g-color--primary g-letter-spacing--2 g-margin-b-25--xs">Mevcut İşletmeler</p>
+        <h2 class="g-font-size-26--xs g-font-size-28--md">Çakırtaş Şirketler Grubu <br>faaliyet alanları</h2>
     </div>
     <div class="row">
         {% for proje in proje  %}
-        <div class="col-sm-6 g-margin-b-30--xs g-margin-b-0--md">
+        <div class="col-sm-6 g-margin-b-50--xs g-margin-b-0--md">
             <!-- News -->
             <article>
                 <img class="img-responsive" src="{{proje.image.url}}" alt="Image">

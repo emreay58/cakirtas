@@ -4,6 +4,8 @@ from ckeditor.fields import RichTextField
 # Create your models here.
 
 class Category(models.Model):
+    icon = models.CharField(max_length=100, null=True)
+    description = models.TextField(null=True)
     name = models.CharField(max_length=50)
     slug = models.SlugField(null=True, blank=True)
 

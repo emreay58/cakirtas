@@ -1,0 +1,28 @@
+        {% load static %}
+        <!-- Features -->
+        <div class="container g-padding-y-80--xs g-padding-t-100--sm">
+            <div class="g-text-center--xs g-margin-b-50--xs">
+                <p class="text-uppercase g-font-size-14--xs g-font-weight--700 g-color--primary g-letter-spacing--2 g-margin-b-25--xs">Faaliyet Alanlarımız</p>
+                <h2 class="g-font-size-22--xs g-font-size-24--md">Çakırtaş Şirketler Grubu <br>faaliyet alanları</h2>
+            </div>
+            <!-- // end row  -->
+            <div class="row">
+                {% for category in category  %}
+                <div class="col-sm-3 g-margin-b-50--xs g-margin-b-0--md">
+                    <div class="clearfix">
+                        <div class="g-media g-width-30--xs">
+                            <div class="fade-in-down" data-wow-duration=".3" data-wow-delay=".4s">
+                                <i class="g-font-size-28--xs g-color--primary {{category.icon}}"></i>
+                            </div>
+                        </div>
+                        <div class="g-media__body g-padding-x-25--xs">
+                            <a href="{% url 'category' category.slug %}"><h3 class="g-font-size-24--xs">{{category.name}}</h3></a>
+                            <p class="g-margin-b-0--xs">{{category.description}}</p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            <!-- // end row  -->
+        </div>
+        <!-- End Features -->

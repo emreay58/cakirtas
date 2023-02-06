@@ -91,7 +91,7 @@ def marka_by_category(request, slug):
         'proje' : proje,
         'category' : category
     }
-    return render(request, 'pages/proje.html', context)
+    return render(request, 'pages/faaliyet.html', context)
 
 
 
