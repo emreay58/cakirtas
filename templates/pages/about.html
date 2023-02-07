@@ -1,6 +1,7 @@
 {% extends 'base.html' %}  
 {% load static %}
-{% block title %}Hakkımızda Sayfa{% endblock title %}
+{% block title %}Çakırtaş Şirketler Grubu | Hakkımızda{% endblock title %}
+{% block description %}Türkiyenin 20'den fazla şehrinde faaliyet sürdüren Çakırtaş Şirketler Grubu faaliyet alanları Gıda, Akaryakıt, Cafe ve Restaurant, İnşaat ve Mimari{% endblock description %}
 {% block content %}
  <!--========== PROMO BLOCK ==========-->
  <div class="g-fullheight--md js__parallax-window" style="background: url({% static 'img/1920x1080/08.jpg' %}) 50% 0 no-repeat fixed;">
@@ -11,12 +12,20 @@
         </div>
     </div>
 </div>
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="{% url 'index' %}">Ana Sayfa</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Hakkımızda</li>
+    </ol>
+  </nav>
 <!--========== END PROMO BLOCK ==========-->
 {% include 'particial/blocks/_about.html' %}
+{% include 'particial/blocks/_faaliyet.html' %}
+
 
 <!--========== PAGE CONTENT ==========-->
 <!-- About -->
-<div class="container g-padding-y-80--xs g-padding-y-125--sm">
+<div class="container g-padding-y-50--xs g-padding-y-70--sm">
     <div class="row g-hor-centered-row--md g-row-col--5 g-margin-b-40--xs g-margin-t-40--xs g-margin-b-100--md">
         <div class="col-sm-3 col-xs-6 g-hor-centered-row__col">
             <div class="wow fadeInLeft" data-wow-duration=".3" data-wow-delay=".1s">
@@ -34,10 +43,10 @@
             <h2 class="g-font-size-32--xs g-font-size-36--sm g-margin-b-25--xs">Carrefour SA - Hypco</h2>
             <div class="col-md-offset-1">
                 <p>Gıda ve Hizmet Sektörünün öncüsü Süper marketler zinciri CARREFOUR SA ile yaptığımız
-                    iş ortaklığı sonucunda Başakşehir'de faaliyetine devam eden Carrefour SA Süper Marketimiz 
-                    ile Başakşehir Çam ve Sakura Hastanesi Çocuk acil giriş kısmında bulunan 
-                    işletmemizde faaliyetlerimize aralıksız devam etmekteyiz. Gıda ve hizmet sektüründe öncü ÇAKIRTAŞ ŞİRKETLER GRUBU 
-                    yeni işletmeler ile büyümeye ve ülkenin katmadeğerine fayda sağlamaya devam etmektedir.</p>   
+                    iş ortaklığı sonucunda Carrefour SA Süper Marketimizi açtık. 
+                    Bununla birlikte İzmit Hypco Akaryakıt İstasyonu işletmemizde faaliyetlerimize aralıksız devam etmekteyiz.
+                    Gıda ve Akaryakıt sektöründe öncü ÇAKIRTAŞ ŞİRKETLER GRUBU büyümeye
+                     ve ülkenin katmadeğerine fayda sağlamaya devam etmektedir.</p>   
             </div>
         </div>
     </div>
@@ -58,7 +67,8 @@
             <p class="text-uppercase g-font-size-14--xs g-font-weight--700 g-color--primary g-letter-spacing--2 g-margin-b-25--xs">Cafe ve Restaurant</p>
             <h2 class="g-font-size-32--xs g-font-size-36--sm g-margin-b-25--xs">Hacıoğlu - Sarıyer Börek</h2>
             <div class="col-md-offset-1">
-                <p>Hacıoğlu Pide, Lahmacun ve Kahvaltı salonlarımız ile Sarıyer Börek işletmelerimiz faaliyetlerini sürdürmektedir. Bu iki özel marka ile iş ortaklığımız ile Çakırtaş Şirketler Grubu büyümeye devam etmektedir.</p>   
+                <p>Hacıoğlu Pide, Lahmacun ve Kahvaltı salonlarımız ile Sarıyer Börek işletmelerimiz ülkemizin birçok şehrinde faaliyet göstermektedir. 
+                    Çakırtaş Şirketler Grubu olarak iki güzide marka ile yaptığımız frençayzing iş ortaklığı ile faaliyetlerimizi sürdürmekteyiz.</p>   
             </div>
         </div>
     </div>
@@ -79,11 +89,11 @@
             <p class="text-uppercase g-font-size-14--xs g-font-weight--700 g-color--primary g-letter-spacing--2 g-margin-b-25--xs">Cafe ve Restaurant</p>
             <h2 class="g-font-size-32--xs g-font-size-36--sm g-margin-b-25--xs">Vm Cafe - Sakura Cafe</h2>
             <div class="col-md-offset-1">
-                <p>Gıda ve Hizmet Sektörünün öncüsü Süper marketler zinciri CARREFOUR SA ile yaptığımız
-                    iş ortaklığı sonucunda Başakşehir'de faaliyetine devam eden Carrefour SA Süper Marketimiz 
-                    ile Başakşehir Çam ve Sakura Hastanesi Çocuk acil giriş kısmında bulunan 
-                    işletmemizde faaliyetlerimize aralıksız devam etmekteyiz. Gıda ve hizmet sektüründe öncü ÇAKIRTAŞ ŞİRKETLER GRUBU 
-                    yeni işletmeler ile büyümeye ve ülkenin katmadeğerine fayda sağlamaya devam etmektedir.</p>   
+                <p> Kendi marka planlamamız içerisinde bulunan Sakura Cafe ve Restaurant ile VM Cafe ve Restaurant
+                    uygun fiyat ve kaliteli hizmet anlayışı ile sektörde öne çıkmayı hedeflemektedir. 
+                    İstanbul Başakşehir Çam ve Sakura Hastanesi kampüsünde bulanan Sakura Cafe ve Restaurant ile 
+                    Göztepe Medical Park Hastanesinde bulunan VM Cafe ve Restaurant işletmelerimiz ile faaliyetlerimizi sürdürmekteyiz.
+                </p>   
             </div>
         </div>
     </div>

@@ -1,6 +1,7 @@
 {% extends 'base.html' %}  
 {% load static %}
-{% block title %}Hizmet Detayı Sayfa{% endblock title %}
+{% block title %}Çakırtaş Şirketler Grubu | Faaliyet Alanlarımız{% endblock title %}
+{% block description %}Türkiyenin 20'den fazla şehrinde faaliyet sürdüren Çakırtaş Şirketler Grubu faaliyet alanları Gıda, Akaryakıt, Cafe ve Restaurant, İnşaat ve Mimari{% endblock description %}
 {% block content %}
 <div class="g-fullheight--md js__parallax-window" style="background: url({% static 'img/1920x1080/08.jpg' %}) 50% 0 no-repeat fixed;">
     <div class="g-container--md g-text-center--xs g-ver-center--md g-padding-y-150--xs g-padding-y-0--md">
@@ -10,6 +11,13 @@
         </div>
     </div>
 </div>
+
 {% include 'particial/blocks/_faaliyet.html' %}
 {% include 'particial/blocks/_proje.html' %}
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="{% url 'index' %}">Ana Sayfa</a></li>
+      <li class="breadcrumb-item active" aria-current="page">İşletmeler</li>
+    </ol>
+  </nav>
 {% endblock content %}

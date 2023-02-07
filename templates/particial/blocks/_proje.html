@@ -2,8 +2,8 @@
  <!-- News -->
  <div class="container g-padding-y-20--xs g-padding-y-50--sm">
     <div class="g-text-center--xs g-margin-b-50--xs">
-        <p class="text-uppercase g-font-size-14--xs g-font-weight--700 g-color--primary g-letter-spacing--2 g-margin-b-25--xs">Mevcut İşletmeler</p>
-        <h2 class="g-font-size-26--xs g-font-size-28--md">Çakırtaş Şirketler Grubu <br>faaliyet alanları</h2>
+        <p class="text-uppercase g-font-size-14--xs g-font-weight--700 g-color--primary g-letter-spacing--2 g-margin-b-25--xs">İşletmelerimiz</p>
+        <h2 class="g-font-size-26--xs g-font-size-28--md">Çakırtaş Şirketler Grubu <br>Mevcut İşletmeler</h2>
     </div>
     <div class="row">
         {% for proje in proje  %}
@@ -15,7 +15,7 @@
                     <p class="text-uppercase g-font-size-14--xs g-font-weight--700 g-color--primary g-letter-spacing--2">{{proje.marka|title}}</p>
                     <h3 class="g-font-size-22--xs g-letter-spacing--1"><a href="{% url 'proje_detail' proje.slug %}">{{proje.title|title}}</a></h3>
                     <p>{{proje.description1|safe|title}}</p>
-                    <a class="btn btn-info" href='{% url 'proje_detail' proje.slug %}'>Mekanı İncele</a>
+                    <a href='{% url 'proje_detail' proje.slug %}' class="btn btn-info btn-md btn-block">AYRINTILI İNCELE</a>
                 </div>
             </article>
             <!-- End News -->
